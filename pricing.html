@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BareGlow &middot; Pricing &amp; Packages</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23BE185D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2C8 6 4 9 4 14a8 8 0 0 0 16 0c0-5-4-8-8-12z'/%3E%3Cpath d='M12 22V12'/%3E%3C/svg%3E" />
+  <meta name="description" content="Explore BareGlow pricing — transparent rates for facial waxing, body waxing, full body packages, and combo deals. Book your appointment today.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontWeight: {
+            thin: '400', extralight: '400', light: '400', normal: '400',
+            medium: '500', semibold: '500', bold: '550', extrabold: '550', black: '550',
+          },
+          colors: {
+            'wax-rose': '#BE185D',
+            'wax-rose-light': '#FCE7F3',
+            'wax-rose-dark': '#831843',
+            'wax-blush': '#FDF2F8',
+            'wax-cream': '#FEF9F3',
+            'wax-cream-dark': '#F5EDE4',
+            'wax-gold': '#C9A227',
+            'wax-gold-light': '#F5E6B8',
+            'wax-charcoal': '#2D1B2E',
+            'wax-gray': '#8A7A85',
+            'wax-sage': '#A8B5A0',
+            'dark-gray': '#1A0F1C',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Jost"', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'fade-up': 'fadeUp 1s ease-out forwards',
+          },
+          keyframes: {
+            floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-15px)' } },
+            fadeUp: { '0%': { opacity: '0', transform: 'translateY(40px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Jost', sans-serif;
+      background-color: #FEF9F3;
+      color: #2D1B2E;
+      overflow-x: hidden;
+    }
+    .dark body { background-color: #1A0F1C; color: #FCE7F3; }
+    h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
+
+    body::-webkit-scrollbar { width: 8px; }
+    body::-webkit-scrollbar-track { background: #FDF2F8; }
+    body::-webkit-scrollbar-thumb { background: #BE185D; border-radius: 10px; }
+    .dark body::-webkit-scrollbar-track { background: #2D1B2E; }
+
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      color: #2D1B2E;
+      transition: color 0.3s;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .dark .nav-link { color: #FCE7F3; }
+    .nav-link:hover { color: #BE185D; }
+    .nav-link.active { color: #BE185D !important; }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background: #BE185D;
+      border-radius: 2px;
+    }
+
+    .dropdown-design { position: relative; }
+    .dropdown-design-menu {
+      position: absolute; top: 100%; left: 0; min-width: 200px;
+      background: #FFFFFF; border-radius: 16px; padding: 0.5rem 0;
+      box-shadow: 0 20px 40px -12px rgba(190,24,93,0.15);
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: all 0.25s ease; z-index: 1000;
+      border: 1px solid #FCE7F3;
+    }
+    .dark .dropdown-design-menu { background: #2D1B2E; border-color: #831843; }
+    .dropdown-design:hover .dropdown-design-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item {
+      display: flex; align-items: center; padding: 0.65rem 1.4rem;
+      transition: all 0.2s; color: #2D1B2E; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .dark .dropdown-item { color: #FCE7F3; }
+    .dropdown-item:hover { background-color: #FDF2F8; color: #BE185D; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background-color: #831843; }
+    .dropdown-item.active { background-color: #FDF2F8; color: #BE185D !important; font-weight: 600; }
+    .dark .dropdown-item.active { background-color: #831843; }
+
+    .mobile-menu-design {
+      background: #FFFFFF; max-height: 0; overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 0 0 24px 24px;
+    }
+    .dark .mobile-menu-design { background: #2D1B2E; }
+    .mobile-menu-design.open { max-height: 85vh; overflow-y: auto; }
+
+    .btn-primary {
+      background-color: #BE185D;
+      color: #FFFFFF;
+      font-weight: 500;
+      border-radius: 60px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      box-shadow: 0 8px 20px -6px rgba(190,24,93,0.4);
+    }
+    .btn-primary:hover {
+      background-color: #831843;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -6px rgba(190,24,93,0.5);
+    }
+    .btn-outline {
+      border: 1.5px solid #2D1B2E;
+      color: #2D1B2E;
+      background: transparent;
+      border-radius: 60px;
+      font-weight: 500;
+      transition: all 0.3s;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+    .btn-outline:hover {
+      background-color: #2D1B2E;
+      color: #FEF9F3;
+      transform: translateY(-2px);
+    }
+    .dark .btn-outline { border-color: #FCE7F3; color: #FCE7F3; }
+    .dark .btn-outline:hover { background-color: #FCE7F3; color: #2D1B2E; }
+
+    [dir="rtl"] .dropdown-design-menu { left: auto; right: 0; }
+    [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+
+    /* ============ PRICING PAGE STYLES ============ */
+
+    /* Hero */
+    .hero-wax {
+      background: linear-gradient(135deg, #FEF9F3 0%, #FDF2F8 60%, #FCE7F3 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .dark .hero-wax {
+      background: linear-gradient(135deg, #1A0F1C 0%, #2D1B2E 60%, #831843 100%);
+    }
+    .hero-wax::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(190,24,93,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-wax::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-wax > * { position: relative; z-index: 2; }
+
+    /* Divider */
+    .divider-flower {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      color: #BE185D;
+    }
+    .divider-flower::before,
+    .divider-flower::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.4;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Floating petals */
+    @keyframes floatPetal {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(8deg); }
+    }
+    .float-petal { animation: floatPetal 8s ease-in-out infinite; }
+    .float-petal-delay { animation: floatPetal 10s ease-in-out 2s infinite; }
+    .float-petal-delay-2 { animation: floatPetal 12s ease-in-out 4s infinite; }
+
+    /* Price card */
+    .price-card {
+      position: relative;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      overflow: hidden;
+    }
+    .price-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #BE185D, #C9A227);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+    .price-card:hover::before { transform: scaleX(1); }
+    .price-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px -20px rgba(190,24,93,0.3);
+    }
+
+    /* Featured price card */
+    .price-card.featured {
+      background: linear-gradient(155deg, #2D1B2E 0%, #831843 100%);
+      border: 2px solid #BE185D;
+      transform: scale(1.02);
+      box-shadow: 0 30px 60px -20px rgba(190,24,93,0.5);
+    }
+    .price-card.featured::before { display: none; }
+    .price-card.featured:hover {
+      transform: scale(1.04) translateY(-6px);
+    }
+
+    /* Ribbon */
+    .ribbon {
+      position: absolute;
+      top: 20px;
+      right: -32px;
+      background: #C9A227;
+      color: #2D1B2E;
+      padding: 6px 40px;
+      transform: rotate(45deg);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      box-shadow: 0 4px 12px rgba(201,162,39,0.4);
+    }
+
+    /* Price menu */
+    .price-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px dashed rgba(190,24,93,0.2);
+      transition: all 0.3s ease;
+      gap: 1rem;
+    }
+    .dark .price-item { border-color: rgba(190,24,93,0.3); }
+    .price-item:last-child { border-bottom: none; }
+    .price-item:hover {
+      padding-left: 8px;
+      color: #BE185D;
+    }
+    .price-item .price-dots {
+      flex: 1;
+      border-bottom: 1px dotted rgba(190,24,93,0.3);
+      margin: 0 0.5rem;
+      transform: translateY(-6px);
+      min-width: 20px;
+    }
+
+    /* Price number */
+    .price-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #2D1B2E;
+      letter-spacing: -0.02em;
+    }
+    .dark .price-number { color: #FCE7F3; }
+    .price-card.featured .price-number { color: #FFFFFF; }
+
+    /* Specialty pills */
+    .specialty-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      background: #FCE7F3;
+      color: #BE185D;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .dark .specialty-pill { background: #831843; color: #FCE7F3; }
+
+    /* Quote mark */
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      line-height: 0.6;
+      color: #FCE7F3;
+      font-weight: 700;
+    }
+    .dark .quote-mark { color: #831843; }
+
+    html { scroll-behavior: smooth; }
+  
+    /* Date picker icon in dark mode */
+    .dark input[type="date"]::-webkit-calendar-picker-indicator,
+    .dark input[type="time"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION — BareGlow -->
+  <!-- ============================================= -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-wax-cream/95 dark:bg-[#1A0F1C]/95 backdrop-blur-md border-b border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-sm transition-all duration-300">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="flex items-center justify-between h-20 md:h-24">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-wax-rose to-wax-rose-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+          <i class="fas fa-spa text-white text-sm md:text-base"></i>
+        </div>
+        <div class="leading-none">
+          <div class="text-xl md:text-3xl font-serif font-bold text-wax-rose tracking-wide">
+            Bare<span class="text-wax-rose italic">Glow</span>
+          </div>
+          <div class="text-[8px] md:text-[9px] uppercase tracking-[0.35em] text-wax-rose font-semibold">Waxing Studio</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden xl:flex items-center gap-7">
+        <div class="dropdown-design">
+          <button class="nav-link flex items-center gap-1 py-2">
+            Home <i class="fas fa-chevron-down text-[9px] ms-1"></i>
+          </button>
+          <div class="dropdown-design-menu">
+            <a href="index.html" class="dropdown-item font-medium">Home 1</a>
+            <a href="home2.html" class="dropdown-item font-medium">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link active">Pricing</a>
+        <a href="waxing.html" class="nav-link">Waxing</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="treatments.html" class="nav-link">Treatments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Right actions -->
+      <div class="flex items-center gap-3">
+        <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 rounded-full border border-wax-rose-light dark:border-wax-rose-dark/40 items-center justify-center text-wax-charcoal dark:text-wax-cream hover:border-wax-rose hover:text-wax-rose transition-all">
+          <span class="text-[9px] font-bold">RTL</span>
+        </button>
+        <button id="theme-toggle" class="hidden xl:flex w-10 h-10 rounded-full border border-wax-rose-light dark:border-wax-rose-dark/40 items-center justify-center text-wax-charcoal dark:text-wax-cream hover:border-wax-rose hover:text-wax-rose transition-all">
+          <i class="fas fa-moon dark:hidden text-xs"></i>
+          <i class="fas fa-sun hidden dark:inline text-xs"></i>
+        </button>
+        <a href="contact.html" class="hidden xl:inline-flex btn-primary px-6 py-3 rounded-full items-center gap-2">
+          <i class="fas fa-calendar-check text-xs"></i>
+          Book Now
+        </a>
+        <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-full bg-wax-rose text-white flex items-center justify-center shadow-md">
+          <i class="fas fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu-design xl:hidden">
+      <div class="py-5 px-3 space-y-1">
+        <div>
+          <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest cursor-pointer">
+            <span>Home</span>
+            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+          </button>
+          <div id="home-mobile-drop" class="hidden pl-3 space-y-1 mt-1 mb-2">
+            <a href="index.html" class="block py-2.5 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-lg text-sm uppercase tracking-widest transition">
+              <i class="fas fa-home w-5 me-2 text-xs"></i> Home 1
+            </a>
+            <a href="home2.html" class="block py-2.5 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-lg text-sm uppercase tracking-widest transition">
+              <i class="fas fa-home w-5 me-2 text-xs"></i> Home 2
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">About</a>
+        <a href="services.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Services</a>
+        <a href="pricing.html" class="block py-3 px-4 font-bold text-wax-rose dark:text-wax-rose-light bg-wax-rose-light/40 dark:bg-wax-rose-dark/40 hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Pricing</a>
+        <a href="waxing.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Waxing</a>
+        <a href="gallery.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Gallery</a>
+        <a href="treatments.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Treatments</a>
+        <a href="contact.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Contact</a>
+
+        <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-wax-rose-light dark:border-wax-rose-dark/30">
+          <a href="contact.html" class="text-center btn-primary py-3.5 rounded-full text-xs font-bold">Book Now</a>
+          <div class="flex gap-3">
+            <button id="mobile-theme-toggle" class="flex-1 py-2.5 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 text-wax-rose text-xs font-semibold uppercase tracking-widest">
+              <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+            </button>
+            <button id="mobile-rtl-toggle" class="flex-1 py-2.5 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 text-wax-rose text-xs font-semibold uppercase tracking-widest">
+              <i class="fas fa-exchange-alt"></i> RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+  <!-- ============================================= -->
+  <!-- SECTION 1: HERO -->
+  <!-- ============================================= -->
+  <section class="hero-wax min-h-[100vh] md:min-h-[720px] flex items-center pt-28 pb-20 md:pt-32 md:pb-24">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left content -->
+        <div class="lg:col-span-12 text-center flex flex-col items-center mx-auto w-full max-w-5xl">
+          <div class="inline-flex items-center gap-3 bg-wax-rose-light/60 dark:bg-wax-rose-dark/30 backdrop-blur-md border border-wax-rose/20 px-5 py-2 rounded-full mb-8 animate-fade-up">
+            <span class="w-2 h-2 rounded-full bg-wax-gold animate-pulse"></span>
+            <span class="text-wax-rose text-[10px] md:text-xs font-semibold uppercase tracking-[0.3em]">Transparent Pricing</span>
+          </div>
+
+          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-wax-charcoal dark:text-wax-cream leading-[1.05] mb-8 animate-fade-up" style="animation-delay: 0.1s;">
+            Simple Prices,<br>
+            <span class="italic font-light text-wax-rose">Beautiful Results</span>
+          </h1>
+
+          <p class="text-wax-gray dark:text-wax-rose-light/70 text-base md:text-lg max-w-xl mx-auto  mb-10 leading-relaxed font-light animate-fade-up" style="animation-delay: 0.2s;">
+            No hidden fees. No surprises. Just honest pricing for premium waxing and body hair removal — designed to fit every budget and every body.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center  animate-fade-up" style="animation-delay: 0.3s;">
+            <a href="#facial" class="btn-primary px-9 py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs font-semibold">
+              <i class="fas fa-tags"></i> View All Prices
+            </a>
+            <a href="contact.html" class="btn-outline px-9 py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs font-semibold">
+              <i class="fas fa-calendar-check"></i> Book Now
+            </a>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="flex flex-wrap items-center justify-center  gap-6 mt-12 animate-fade-up" style="animation-delay: 0.4s;">
+            <div class="flex items-center gap-2 text-wax-gray dark:text-wax-rose-light/60">
+              <i class="fas fa-shield-alt text-wax-gold"></i>
+              <span class="text-[10px] uppercase tracking-widest font-semibold">No Hidden Fees</span>
+            </div>
+            <div class="flex items-center gap-2 text-wax-gray dark:text-wax-rose-light/60">
+              <i class="fas fa-tags text-wax-gold"></i>
+              <span class="text-[10px] uppercase tracking-widest font-semibold">Bundle &amp; Save 30%</span>
+            </div>
+            <div class="flex items-center gap-2 text-wax-gray dark:text-wax-rose-light/60">
+              <i class="fas fa-gift text-wax-gold"></i>
+              <span class="text-[10px] uppercase tracking-widest font-semibold">First Visit 20% Off</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right visual -->
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 2: FACIAL PRICING -->
+  <!-- ============================================= -->
+  <section id="facial" class="py-24 md:py-32 bg-white dark:bg-[#1A0F1C] relative overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-wax-rose-light/40 dark:bg-wax-rose-dark/20 rounded-full blur-3xl"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Content -->
+        <div class="reveal text-center lg:text-left">
+          <div class="divider-flower mb-6">
+            <i class="fas fa-face-smile text-xs"></i>
+          </div>
+          <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Pricing 01</span>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6 leading-tight">
+            Facial <span class="italic font-light text-wax-rose">Pricing</span>
+          </h2>
+          <p class="text-wax-gray dark:text-wax-rose-light/70 text-base md:text-lg leading-relaxed mb-8 mx-auto lg:mx-0 max-w-2xl">
+            Gentle, precise facial waxing for beautifully defined features. Every treatment includes consultation, pre-wax care, and soothing aftercare.
+          </p>
+
+          <!-- Facial price menu -->
+          <div class="bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-6 md:p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-4 pb-3 border-b border-wax-rose-light dark:border-wax-rose-dark/30">Face Treatments</div>
+
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-eye text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Eyebrow Shaping</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$25</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-smile text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Upper Lip</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$15</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-face-grin text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Chin</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$15</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-face-smile-beam text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Cheeks / Sideburns</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$20</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-face-grin-stars text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Chin &amp; Upper Lip Combo</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$25</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-star text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm font-bold">Full Face Package</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$75</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 3: BODY PRICING -->
+  <!-- ============================================= -->
+  <section id="body" class="py-24 md:py-32 bg-wax-cream dark:bg-dark-gray relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-wax-rose-light/40 dark:bg-wax-rose-dark/20 rounded-full blur-3xl"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Content -->
+        <div class="reveal text-center lg:text-left">
+          <div class="divider-flower mb-6">
+            <i class="fas fa-person-dress text-xs"></i>
+          </div>
+          <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Pricing 02</span>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6 leading-tight">
+            Body <span class="italic font-light text-wax-rose">Pricing</span>
+          </h2>
+          <p class="text-wax-gray dark:text-wax-rose-light/70 text-base md:text-lg leading-relaxed mb-8 mx-auto lg:mx-0 max-w-2xl">
+            Target specific areas or combine treatments for smooth, glowing skin. All body waxing includes gentle prep and soothing aftercare.
+          </p>
+
+          <!-- Body price menu -->
+          <div class="bg-white dark:bg-wax-charcoal rounded-3xl p-6 md:p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-4 pb-3 border-b border-wax-rose-light dark:border-wax-rose-dark/30">Body Treatments</div>
+
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-person-walking text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Half Legs</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$45</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-person-walking text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Full Legs</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$75</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-hand text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Half Arms</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$25</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-hand text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Full Arms</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$45</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-feather text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Underarms</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$30</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-star text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm">Bikini Line</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$45</span>
+            </div>
+            <div class="price-item">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-star text-wax-rose text-sm"></i>
+                <span class="font-medium text-wax-charcoal dark:text-wax-cream text-sm font-bold">Brazilian</span>
+              </div>
+              <div class="price-dots"></div>
+              <span class="text-wax-rose font-bold text-sm whitespace-nowrap">$65</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 4: FULL BODY PACKAGES -->
+  <!-- ============================================= -->
+  <section id="full-body" class="py-24 md:py-32 bg-white dark:bg-[#1A0F1C] relative overflow-hidden">
+    <div class="absolute -top-20 left-1/3 w-96 h-96 bg-wax-rose-light/40 dark:bg-wax-rose-dark/20 rounded-full blur-3xl"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="text-center mb-16 reveal">
+        <div class="divider-flower mb-6">
+          <i class="fas fa-crown text-xs"></i>
+        </div>
+        <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Pricing 03</span>
+        <h2 class="text-4xl md:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6">
+          Full Body <span class="italic font-light text-wax-rose">Packages</span>
+        </h2>
+        <p class="text-wax-gray dark:text-wax-rose-light/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          Complete your full-body smoothness with our bundled packages — better value, one appointment, total relaxation.
+        </p>
+      </div>
+
+      <!-- 3 Full body tiers -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+
+        <!-- Tier 1 -->
+        <div class="price-card flex flex-col bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-lg reveal">
+          <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-3">Essential</div>
+          <h3 class="font-serif font-bold text-2xl text-wax-charcoal dark:text-wax-cream mb-6">Half Body</h3>
+          <div class="flex items-end gap-1 mb-6">
+            <span class="price-number text-wax-rose">$129</span>
+            <span class="text-wax-gray text-sm mb-2">/ session</span>
+          </div>
+          <ul class="space-y-3 mb-8 text-sm text-wax-gray dark:text-wax-rose-light/70">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Full legs or full arms</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Underarms</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Bikini line</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> 60 min appointment</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Save $20+ vs singles</li>
+          </ul>
+          <a href="contact.html" class="block text-center btn-outline py-3 rounded-full text-xs font-semibold w-full mt-auto">Book Half Body</a>
+        </div>
+
+        <!-- Tier 2 - Featured -->
+        <div class="price-card flex flex-col featured text-white rounded-3xl p-8 relative reveal">
+          <div class="ribbon">Most Popular</div>
+          <div class="text-[10px] uppercase tracking-widest font-bold text-wax-rose-light/80 mb-3">Best Value</div>
+          <h3 class="font-serif font-bold text-2xl mb-6">Full Body</h3>
+          <div class="flex items-end gap-1 mb-6">
+            <span class="price-number text-wax-gold">$199</span>
+            <span class="text-white/60 text-sm mb-2">/ session</span>
+          </div>
+          <ul class="space-y-3 mb-8 text-sm text-white/85">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-gold mt-1 text-xs"></i> Full legs &amp; arms</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-gold mt-1 text-xs"></i> Underarms &amp; bikini</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-gold mt-1 text-xs"></i> Eyebrow shaping</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-gold mt-1 text-xs"></i> Upper lip</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-gold mt-1 text-xs"></i> 90 min appointment</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-gold mt-1 text-xs"></i> Save $60+ vs singles</li>
+          </ul>
+          <a href="contact.html" class="block text-center bg-wax-rose hover:bg-wax-gold hover:text-wax-charcoal text-white py-3 rounded-full text-xs font-bold uppercase tracking-widest transition w-full mt-auto">Book Full Body</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="price-card flex flex-col bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-lg reveal">
+          <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-3">Deluxe</div>
+          <h3 class="font-serif font-bold text-2xl text-wax-charcoal dark:text-wax-cream mb-6">Body + Facial</h3>
+          <div class="flex items-end gap-1 mb-6">
+            <span class="price-number text-wax-rose">$249</span>
+            <span class="text-wax-gray text-sm mb-2">/ session</span>
+          </div>
+          <ul class="space-y-3 mb-8 text-sm text-wax-gray dark:text-wax-rose-light/70">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Everything in Full Body</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Full facial waxing</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Post-care serum</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> 120 min appointment</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-wax-rose mt-1 text-xs"></i> Save $90+ vs singles</li>
+          </ul>
+          <a href="contact.html" class="block text-center btn-outline py-3 rounded-full text-xs font-semibold w-full mt-auto">Book Deluxe</a>
+        </div>
+
+      </div>
+
+      <!-- Highlight banner -->
+      <div class="relative rounded-[40px] overflow-hidden shadow-2xl max-w-5xl mx-auto reveal">
+        <img src="assets/hero2-secondary.jpg" alt="Full Body Waxing Package" class="w-full h-[280px] md:h-[360px] object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-wax-charcoal/90 via-wax-charcoal/60 to-transparent flex items-center">
+          <div class="p-8 md:p-14 max-w-lg">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 px-4 py-1.5 rounded-full mb-4">
+              <i class="fas fa-star text-wax-gold text-xs"></i>
+              <span class="text-white text-[10px] uppercase tracking-widest font-semibold">Best Value</span>
+            </div>
+            <h3 class="text-3xl md:text-4xl font-serif text-white mb-4 leading-tight">Save More With Full Body</h3>
+            <p class="text-white/80 text-sm mb-6 leading-relaxed">Bundle all treatments into one seamless, luxurious appointment — and save up to $90.</p>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-wax-rose hover:bg-wax-gold hover:text-wax-charcoal px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition">
+              Book Full Body <i class="fas fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 5: COMBO PACKAGES -->
+  <!-- ============================================= -->
+  <section id="combo" class="py-24 md:py-32 bg-wax-blush dark:bg-wax-charcoal relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-wax-rose-light/50 dark:bg-wax-rose-dark/20 rounded-full blur-3xl"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="text-center mb-16 reveal">
+        <div class="divider-flower mb-6">
+          <i class="fas fa-gift text-xs"></i>
+        </div>
+        <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Pricing 04</span>
+        <h2 class="text-4xl md:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6">
+          Combo <span class="italic font-light text-wax-rose">Packages</span>
+        </h2>
+        <p class="text-wax-gray dark:text-wax-rose-light/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          Combine your favorite treatments and save more. Perfect for those who like to book multiple services in one visit.
+        </p>
+      </div>
+
+      <!-- Combo cards grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+        <!-- Combo 1 -->
+        <div class="price-card flex flex-col bg-white dark:bg-[#1A0F1C] rounded-3xl p-7 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-lg reveal">
+          <div class="flex-1">
+            <div class="w-14 h-14 rounded-2xl bg-wax-rose-light dark:bg-wax-rose-dark/40 flex items-center justify-center text-wax-rose mb-5">
+              <i class="fas fa-face-smile text-lg"></i>
+            </div>
+            <div class="inline-flex items-center gap-1 bg-wax-gold text-wax-charcoal px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold mb-3">Save $10</div>
+            <h3 class="font-serif font-bold text-lg text-wax-charcoal dark:text-wax-cream mb-2">Brow + Lip</h3>
+            <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed mb-5">The perfect quick refresh — eyebrows and upper lip together.</p>
+          </div>
+          <div class="flex items-end gap-2 mb-5 pt-4 border-t border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <span class="text-3xl font-serif font-bold text-wax-rose">$30</span>
+            <span class="text-sm text-wax-gray line-through mb-1">$40</span>
+          </div>
+          <a href="contact.html" class="block text-center btn-primary py-3 rounded-full text-xs font-semibold w-full">Book Combo</a>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="price-card flex flex-col bg-white dark:bg-[#1A0F1C] rounded-3xl p-7 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-lg reveal">
+          <div class="flex-1">
+            <div class="w-14 h-14 rounded-2xl bg-wax-rose-light dark:bg-wax-rose-dark/40 flex items-center justify-center text-wax-rose mb-5">
+              <i class="fas fa-spa text-lg"></i>
+            </div>
+            <div class="inline-flex items-center gap-1 bg-wax-gold text-wax-charcoal px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold mb-3">Save $15</div>
+            <h3 class="font-serif font-bold text-lg text-wax-charcoal dark:text-wax-cream mb-2">Underarm + Bikini</h3>
+            <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed mb-5">Everyday smoothness — underarms and bikini line in one visit.</p>
+          </div>
+          <div class="flex items-end gap-2 mb-5 pt-4 border-t border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <span class="text-3xl font-serif font-bold text-wax-rose">$60</span>
+            <span class="text-sm text-wax-gray line-through mb-1">$75</span>
+          </div>
+          <a href="contact.html" class="block text-center btn-primary py-3 rounded-full text-xs font-semibold w-full">Book Combo</a>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="price-card flex flex-col bg-white dark:bg-[#1A0F1C] rounded-3xl p-7 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-lg reveal">
+          <div class="flex-1">
+            <div class="w-14 h-14 rounded-2xl bg-wax-rose-light dark:bg-wax-rose-dark/40 flex items-center justify-center text-wax-rose mb-5">
+              <i class="fas fa-fire text-lg"></i>
+            </div>
+            <div class="inline-flex items-center gap-1 bg-wax-gold text-wax-charcoal px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold mb-3">Save $20</div>
+            <h3 class="font-serif font-bold text-lg text-wax-charcoal dark:text-wax-cream mb-2">Legs + Underarm</h3>
+            <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed mb-5">Full leg smoothness plus underarms — the classic combo.</p>
+          </div>
+          <div class="flex items-end gap-2 mb-5 pt-4 border-t border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <span class="text-3xl font-serif font-bold text-wax-rose">$85</span>
+            <span class="text-sm text-wax-gray line-through mb-1">$105</span>
+          </div>
+          <a href="contact.html" class="block text-center btn-primary py-3 rounded-full text-xs font-semibold w-full">Book Combo</a>
+        </div>
+
+        <!-- Combo 4 - Featured -->
+        <div class="price-card flex flex-col featured text-white rounded-3xl p-7 relative reveal">
+          <div class="flex-1">
+            <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center text-wax-gold mb-5">
+              <i class="fas fa-crown text-lg"></i>
+            </div>
+            <div class="inline-flex items-center gap-1 bg-wax-gold text-wax-charcoal px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold mb-3">Save $35</div>
+            <h3 class="font-serif font-bold text-lg mb-2">Bridal Glow</h3>
+            <p class="text-sm text-white/75 leading-relaxed mb-5">Complete prep for your big day — facial + underarm + bikini + legs.</p>
+          </div>
+          <div class="flex items-end gap-2 mb-5 pt-4 border-t border-white/15">
+            <span class="text-3xl font-serif font-bold text-wax-gold">$165</span>
+            <span class="text-sm text-white/50 line-through mb-1">$200</span>
+          </div>
+          <a href="contact.html" class="block text-center bg-wax-rose hover:bg-wax-gold hover:text-wax-charcoal text-white py-3 rounded-full text-xs font-bold uppercase tracking-widest transition w-full">Book Bridal</a>
+        </div>
+
+      </div>
+
+      <!-- Combo note -->
+      <div class="mt-14 max-w-3xl mx-auto text-center reveal">
+        <div class="quote-mark mb-4">"</div>
+        <p class="text-xl md:text-2xl italic font-serif text-wax-charcoal dark:text-wax-cream leading-relaxed">
+          Bundle your treatments and save more — because beautiful skin should never break the bank.
+        </p>
+        <div class="mt-6 flex items-center justify-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wax-rose flex items-center justify-center text-white font-serif font-bold text-sm">SL</div>
+          <div class="text-left">
+            <div class="font-bold text-wax-charcoal dark:text-wax-cream text-sm">Sophia Laurent</div>
+            <div class="text-xs text-wax-gray dark:text-wax-rose-light/60">Founder, BareGlow Studio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 6: BOOK NOW -->
+  <!-- ============================================= -->
+  <section id="book" class="py-24 md:py-32 bg-white dark:bg-[#1A0F1C] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="text-center mb-16 reveal">
+        <div class="divider-flower mb-6">
+          <i class="fas fa-calendar-check text-xs"></i>
+        </div>
+        <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Ready to Book?</span>
+        <h2 class="text-4xl md:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6">
+          Book <span class="italic font-light text-wax-rose">Now</span>
+        </h2>
+        <p class="text-wax-gray dark:text-wax-rose-light/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          Choose your service, pick a time, and enjoy 20% off your first visit. Book online in just a minute.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 max-w-6xl mx-auto">
+
+        <!-- Left info -->
+        <div class="lg:col-span-5 reveal">
+          <div class="bg-gradient-to-br from-wax-charcoal to-wax-rose-dark rounded-[32px] p-8 md:p-10 text-white shadow-2xl h-full relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-wax-rose/30 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-wax-gold/20 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10">
+              <div class="w-14 h-14 rounded-2xl bg-wax-rose flex items-center justify-center mb-6">
+                <i class="fas fa-calendar-check text-xl"></i>
+              </div>
+              <h3 class="font-serif font-bold text-2xl md:text-3xl mb-4">Why Book With BareGlow?</h3>
+              <p class="text-white/70 text-sm leading-relaxed mb-8">
+                We make booking simple, flexible, and rewarding — because your time and comfort matter.
+              </p>
+
+              <div class="space-y-5 mb-8">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                    <i class="fas fa-bolt text-wax-gold text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-bold text-sm">Instant Confirmation</div>
+                    <div class="text-white/60 text-xs mt-1">Book in 60 seconds, confirmed immediately</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                    <i class="fas fa-gift text-wax-gold text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-bold text-sm">20% Off First Visit</div>
+                    <div class="text-white/60 text-xs mt-1">New clients save on their first treatment</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                    <i class="fas fa-sync-alt text-wax-gold text-sm"></i>
+                  </div>
+                  <div>
+                    <div class="font-bold text-sm">Free Cancellation</div>
+                    <div class="text-white/60 text-xs mt-1">Change your booking up to 24 hrs before</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-white/15">
+                <div class="text-[10px] uppercase tracking-widest font-bold text-white/50 mb-4">Or Call Us Directly</div>
+                <a href="tel:+12125550199" class="flex items-center gap-3 hover:text-wax-gold transition">
+                  <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center">
+                    <i class="fas fa-phone text-wax-gold"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-lg">+1 (212) 555-0199</div>
+                    <div class="text-xs text-white/50">Mon–Sun · 9am – 8pm</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right booking form -->
+        <div class="lg:col-span-7 reveal">
+          <form class="bg-wax-blush dark:bg-wax-charcoal rounded-[32px] p-8 md:p-10 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-xl">
+            <div class="flex items-center gap-4 mb-8 pb-6 border-b border-wax-rose-light dark:border-wax-rose-dark/30">
+              <div class="w-14 h-14 rounded-2xl bg-wax-rose flex items-center justify-center text-white shadow-lg">
+                <i class="fas fa-calendar-plus text-xl"></i>
+              </div>
+              <div>
+                <div class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream">Book Your Appointment</div>
+                <div class="text-xs text-wax-gray dark:text-wax-rose-light/60">Fill in the form below</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="name" class="block text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-2">Full Name *</label>
+                <input type="text" id="name" required placeholder="Jane Doe" class="w-full px-4 py-3.5 rounded-xl border border-wax-rose-light dark:border-wax-rose-dark/40 bg-white dark:bg-[#1A0F1C] text-wax-charcoal dark:text-wax-cream text-sm focus:border-wax-rose focus:outline-none focus:ring-2 focus:ring-wax-rose/20 transition">
+              </div>
+              <div>
+                <label for="phone" class="block text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-2">Phone Number *</label>
+                <input type="tel" id="phone" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3.5 rounded-xl border border-wax-rose-light dark:border-wax-rose-dark/40 bg-white dark:bg-[#1A0F1C] text-wax-charcoal dark:text-wax-cream text-sm focus:border-wax-rose focus:outline-none focus:ring-2 focus:ring-wax-rose/20 transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="email" class="block text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-2">Email Address *</label>
+                <input type="email" id="email" required placeholder="jane@example.com" class="w-full px-4 py-3.5 rounded-xl border border-wax-rose-light dark:border-wax-rose-dark/40 bg-white dark:bg-[#1A0F1C] text-wax-charcoal dark:text-wax-cream text-sm focus:border-wax-rose focus:outline-none focus:ring-2 focus:ring-wax-rose/20 transition">
+              </div>
+              <div>
+                <label for="treatment" class="block text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-2">Treatment *</label>
+                <select id="treatment" required class="w-full px-4 py-3.5 rounded-xl border border-wax-rose-light dark:border-wax-rose-dark/40 bg-white dark:bg-[#1A0F1C] text-wax-charcoal dark:text-wax-cream text-sm focus:border-wax-rose focus:outline-none focus:ring-2 focus:ring-wax-rose/20 transition appearance-none cursor-pointer">
+                  <option value="" disabled selected>Choose treatment</option>
+                  <option>Facial Waxing</option>
+                  <option>Body Waxing</option>
+                  <option>Full Body Package</option>
+                  <option>Combo Package</option>
+                  <option>Bridal Package</option>
+                  <option>Consultation Only</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div>
+                <label for="date" class="block text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-2">Preferred Date *</label>
+                <input type="date" id="date" required class="w-full px-4 py-3.5 rounded-xl border border-wax-rose-light dark:border-wax-rose-dark/40 bg-white dark:bg-[#1A0F1C] text-wax-charcoal dark:text-wax-cream text-sm focus:border-wax-rose focus:outline-none focus:ring-2 focus:ring-wax-rose/20 transition">
+              </div>
+              <div>
+                <label for="time" class="block text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-2">Preferred Time *</label>
+                <select id="time" required class="w-full px-4 py-3.5 rounded-xl border border-wax-rose-light dark:border-wax-rose-dark/40 bg-white dark:bg-[#1A0F1C] text-wax-charcoal dark:text-wax-cream text-sm focus:border-wax-rose focus:outline-none focus:ring-2 focus:ring-wax-rose/20 transition appearance-none cursor-pointer">
+                  <option value="" disabled selected>Select time</option>
+                  <option>9:00 AM</option>
+                  <option>10:30 AM</option>
+                  <option>12:00 PM</option>
+                  <option>1:30 PM</option>
+                  <option>3:00 PM</option>
+                  <option>4:30 PM</option>
+                  <option>6:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label for="notes" class="block text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mb-2">Notes (Optional)</label>
+              <textarea id="notes" rows="3" placeholder="Anything we should know?" class="w-full px-4 py-3.5 rounded-xl border border-wax-rose-light dark:border-wax-rose-dark/40 bg-white dark:bg-[#1A0F1C] text-wax-charcoal dark:text-wax-cream text-sm focus:border-wax-rose focus:outline-none focus:ring-2 focus:ring-wax-rose/20 transition resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full btn-primary py-4 rounded-full text-xs font-bold">
+              <i class="fas fa-calendar-check me-2"></i> Confirm Booking
+            </button>
+
+            <p class="text-center text-wax-gray dark:text-wax-rose-light/60 text-xs mt-4">
+              <i class="fas fa-lock me-1"></i> Your information is safe and secure
+            </p>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA strip -->
+      <div class="col-span-full w-full mt-16 bg-gradient-to-br from-wax-rose to-wax-rose-dark rounded-[40px] p-10 md:p-14 text-center reveal">
+        <h3 class="text-3xl md:text-5xl font-serif text-white mb-4 leading-tight">
+          Not Sure Which Package <br class="hidden md:block">
+          <span class="italic font-light">Is Right for You?</span>
+        </h3>
+        <p class="text-wax-gray dark:text-wax-rose-light/70 text-base md:text-lg max-w-xl mx-auto mb-8">
+          Talk to our team. We'll help you pick the perfect treatment for your skin and schedule.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="bg-white text-wax-rose hover:bg-wax-charcoal hover:text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-2xl inline-flex items-center justify-center gap-2">
+            <i class="fas fa-comments"></i> Talk to Our Team
+          </a>
+          <a href="services.html" class="border-2 border-white text-white hover:bg-white hover:text-wax-rose px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 inline-flex items-center justify-center gap-2">
+            <i class="fas fa-sparkles"></i> View Services
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="bg-wax-charcoal dark:bg-[#0F0810] text-white pt-20 pb-8 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 right-0 text-center pointer-events-none select-none opacity-[0.03] translate-y-1/4">
+      <h2 class="font-serif font-bold text-[18vw] whitespace-nowrap text-white">BareGlow</h2>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
+
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-wax-rose to-wax-rose-dark flex items-center justify-center">
+              <i class="fas fa-spa text-white"></i>
+            </div>
+            <div class="leading-none">
+              <div class="text-2xl font-serif font-bold text-wax-rose">Bare<span class="text-wax-rose italic">Glow</span></div>
+              <div class="text-[9px] uppercase tracking-[0.35em] text-wax-rose font-semibold">Waxing Studio</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6 max-w-sm">
+            A luxury waxing and body hair removal studio dedicated to making every client feel confident, comfortable, and cared for.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-pinterest-p text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-tiktok text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wax-gold mb-6">Explore</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="about.html" class="text-white/60 hover:text-wax-gold transition">About Us</a></li>
+            <li><a href="services.html" class="text-white/60 hover:text-wax-gold transition">Services</a></li>
+            <li><a href="pricing.html" class="text-white/60 hover:text-wax-gold transition">Pricing</a></li>
+            <li><a href="gallery.html" class="text-white/60 hover:text-wax-gold transition">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wax-gold mb-6">Treatments</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="waxing.html" class="text-white/60 hover:text-wax-gold transition">Waxing</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Body Treatments</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Facial Waxing</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Brazilian</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Full Body</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wax-gold mb-6">Get in Touch</h4>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-wax-rose mt-1"></i>
+              <span class="text-white/60">128 Glow Avenue, Suite 4<br>New York, NY 10012</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-wax-rose"></i>
+              <a href="tel:+12125550199" class="text-white/60 hover:text-wax-gold transition">+1 (212) 555-0199</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-wax-rose"></i>
+              <a href="mailto:hello@bareglowstudio.com" class="text-white/60 hover:text-wax-gold transition">hello@bareglowstudio.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-wax-rose mt-1"></i>
+              <span class="text-white/60">Mon–Fri: 9am – 8pm<br>Sat–Sun: 10am – 6pm</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-[10px] uppercase tracking-[0.2em]">© 2026 BareGlow Waxing Studio. All rights reserved.</p>
+        <div class="flex gap-6 text-[10px] uppercase tracking-[0.2em] text-white/40">
+          <a href="#" class="hover:text-wax-gold transition">Privacy</a>
+          <a href="#" class="hover:text-wax-gold transition">Terms</a>
+          <a href="#" class="hover:text-wax-gold transition">Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================= -->
+  <!-- SCRIPTS -->
+  <!-- ============================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+      themeBtns.forEach(btn => {
+        btn?.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      });
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+      // RTL
+      function setRTL(isRTL) {
+        const html = document.documentElement;
+        if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+        else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+      }
+      const savedDir = localStorage.getItem('dir');
+      if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      else document.documentElement.setAttribute('dir', 'ltr');
+
+      const rtlBtn = document.getElementById('rtl-toggle');
+      if (rtlBtn) rtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+      const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+      if (mobileRtlBtn) mobileRtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+
+      // Mobile menu
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+          const icon = mobileToggle.querySelector('i');
+          if (mobileMenu.classList.contains('open')) {
+            icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+          }
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+          });
+        });
+      }
+
+      // Reveal on scroll
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            const offset = 100;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Booking form demo
+      const bookingForm = document.querySelector('#book form');
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const btn = bookingForm.querySelector('button[type="submit"]');
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Booking...';
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.innerHTML = '<i class="fas fa-check me-2"></i> Booked Successfully!';
+            btn.style.background = '#16A34A';
+            setTimeout(() => {
+              btn.innerHTML = originalText;
+              btn.style.background = '';
+              btn.disabled = false;
+              bookingForm.reset();
+            }, 2500);
+          }, 1200);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

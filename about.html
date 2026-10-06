@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BareGlow &middot; About Our Studio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23BE185D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2C8 6 4 9 4 14a8 8 0 0 0 16 0c0-5-4-8-8-12z'/%3E%3Cpath d='M12 22V12'/%3E%3C/svg%3E" />
+  <meta name="description" content="Meet BareGlow — a luxury waxing and body hair removal studio. Discover our story, our specialists, and our commitment to comfort and hygiene.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontWeight: {
+            thin: '400', extralight: '400', light: '400', normal: '400',
+            medium: '500', semibold: '500', bold: '550', extrabold: '550', black: '550',
+          },
+          colors: {
+            'wax-rose': '#BE185D',
+            'wax-rose-light': '#FCE7F3',
+            'wax-rose-dark': '#831843',
+            'wax-blush': '#FDF2F8',
+            'wax-cream': '#FEF9F3',
+            'wax-cream-dark': '#F5EDE4',
+            'wax-gold': '#C9A227',
+            'wax-gold-light': '#F5E6B8',
+            'wax-charcoal': '#2D1B2E',
+            'wax-gray': '#8A7A85',
+            'wax-sage': '#A8B5A0',
+            'dark-gray': '#1A0F1C',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Jost"', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'fade-up': 'fadeUp 1s ease-out forwards',
+          },
+          keyframes: {
+            floatSlow: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-15px)' } },
+            fadeUp: { '0%': { opacity: '0', transform: 'translateY(40px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Jost', sans-serif;
+      background-color: #FEF9F3;
+      color: #2D1B2E;
+      overflow-x: hidden;
+    }
+    .dark body { background-color: #1A0F1C; color: #FCE7F3; }
+    h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
+
+    body::-webkit-scrollbar { width: 8px; }
+    body::-webkit-scrollbar-track { background: #FDF2F8; }
+    body::-webkit-scrollbar-thumb { background: #BE185D; border-radius: 10px; }
+    .dark body::-webkit-scrollbar-track { background: #2D1B2E; }
+
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      color: #2D1B2E;
+      transition: color 0.3s;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .dark .nav-link { color: #FCE7F3; }
+    .nav-link:hover { color: #BE185D; }
+    .nav-link.active { color: #BE185D !important; }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background: #BE185D;
+      border-radius: 2px;
+    }
+
+    .dropdown-design { position: relative; }
+    .dropdown-design-menu {
+      position: absolute; top: 100%; left: 0; min-width: 200px;
+      background: #FFFFFF; border-radius: 16px; padding: 0.5rem 0;
+      box-shadow: 0 20px 40px -12px rgba(190,24,93,0.15);
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: all 0.25s ease; z-index: 1000;
+      border: 1px solid #FCE7F3;
+    }
+    .dark .dropdown-design-menu { background: #2D1B2E; border-color: #831843; }
+    .dropdown-design:hover .dropdown-design-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item {
+      display: flex; align-items: center; padding: 0.65rem 1.4rem;
+      transition: all 0.2s; color: #2D1B2E; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .dark .dropdown-item { color: #FCE7F3; }
+    .dropdown-item:hover { background-color: #FDF2F8; color: #BE185D; padding-left: 1.7rem; }
+    .dark .dropdown-item:hover { background-color: #831843; }
+    .dropdown-item.active { background-color: #FDF2F8; color: #BE185D !important; font-weight: 600; }
+    .dark .dropdown-item.active { background-color: #831843; }
+
+    .mobile-menu-design {
+      background: #FFFFFF; max-height: 0; overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 0 0 24px 24px;
+    }
+    .dark .mobile-menu-design { background: #2D1B2E; }
+    .mobile-menu-design.open { max-height: 85vh; overflow-y: auto; }
+
+    .btn-primary {
+      background-color: #BE185D;
+      color: #FFFFFF;
+      font-weight: 500;
+      border-radius: 60px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      box-shadow: 0 8px 20px -6px rgba(190,24,93,0.4);
+    }
+    .btn-primary:hover {
+      background-color: #831843;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -6px rgba(190,24,93,0.5);
+    }
+    .btn-outline {
+      border: 1.5px solid #2D1B2E;
+      color: #2D1B2E;
+      background: transparent;
+      border-radius: 60px;
+      font-weight: 500;
+      transition: all 0.3s;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+    .btn-outline:hover {
+      background-color: #2D1B2E;
+      color: #FEF9F3;
+      transform: translateY(-2px);
+    }
+    .dark .btn-outline { border-color: #FCE7F3; color: #FCE7F3; }
+    .dark .btn-outline:hover { background-color: #FCE7F3; color: #2D1B2E; }
+
+    [dir="rtl"] .dropdown-design-menu { left: auto; right: 0; }
+    [dir="rtl"] .dropdown-item i { margin-right: 0; margin-left: 0.75rem; }
+
+    /* ============ ABOUT PAGE STYLES ============ */
+
+    /* Hero */
+    .hero-wax {
+      background: linear-gradient(135deg, #FEF9F3 0%, #FDF2F8 60%, #FCE7F3 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .dark .hero-wax {
+      background: linear-gradient(135deg, #1A0F1C 0%, #2D1B2E 60%, #831843 100%);
+    }
+    .hero-wax::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(190,24,93,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-wax::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(201,162,39,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-wax > * { position: relative; z-index: 2; }
+
+    /* Decorative divider */
+    .divider-flower {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      color: #BE185D;
+    }
+    .divider-flower::before,
+    .divider-flower::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.4;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Floating petals */
+    @keyframes floatPetal {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(8deg); }
+    }
+    .float-petal { animation: floatPetal 8s ease-in-out infinite; }
+    .float-petal-delay { animation: floatPetal 10s ease-in-out 2s infinite; }
+    .float-petal-delay-2 { animation: floatPetal 12s ease-in-out 4s infinite; }
+
+    /* Specialist card */
+    .specialist-card {
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .specialist-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px -20px rgba(190,24,93,0.25);
+    }
+    .specialist-card .img-wrap { overflow: hidden; }
+    .specialist-card img { transition: transform 1.2s ease; }
+    .specialist-card:hover img { transform: scale(1.08); }
+
+    /* Approach step */
+    .approach-step {
+      position: relative;
+      transition: all 0.4s ease;
+    }
+    .approach-step:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Hygiene feature card */
+    .hygiene-card {
+      position: relative;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+    .hygiene-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, #BE185D, #831843);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.4s ease;
+    }
+    .hygiene-card:hover::before { transform: scaleY(1); }
+    .hygiene-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 20px 40px -12px rgba(190,24,93,0.2);
+    }
+
+    /* Stat card */
+    .stat-card {
+      transition: all 0.4s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* Quote mark */
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      line-height: 0.6;
+      color: #FCE7F3;
+      font-weight: 700;
+    }
+    .dark .quote-mark { color: #831843; }
+
+    html { scroll-behavior: smooth; }
+  
+    /* Date picker icon in dark mode */
+    .dark input[type="date"]::-webkit-calendar-picker-indicator,
+    .dark input[type="time"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION — BareGlow -->
+  <!-- ============================================= -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-wax-cream/95 dark:bg-[#1A0F1C]/95 backdrop-blur-md border-b border-wax-rose-light/60 dark:border-wax-rose-dark/30 shadow-sm transition-all duration-300">
+  <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="flex items-center justify-between h-20 md:h-24">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-wax-rose to-wax-rose-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+          <i class="fas fa-spa text-white text-sm md:text-base"></i>
+        </div>
+        <div class="leading-none">
+          <div class="text-xl md:text-3xl font-serif font-bold text-wax-rose tracking-wide">
+            Bare<span class="text-wax-rose italic">Glow</span>
+          </div>
+          <div class="text-[8px] md:text-[9px] uppercase tracking-[0.35em] text-wax-rose font-semibold">Waxing Studio</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden xl:flex items-center gap-7">
+        <div class="dropdown-design">
+          <button class="nav-link flex items-center gap-1 py-2">
+            Home <i class="fas fa-chevron-down text-[9px] ms-1"></i>
+          </button>
+          <div class="dropdown-design-menu">
+            <a href="index.html" class="dropdown-item font-medium">Home 1</a>
+            <a href="home2.html" class="dropdown-item font-medium">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="waxing.html" class="nav-link">Waxing</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="treatments.html" class="nav-link">Treatments</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Right actions -->
+      <div class="flex items-center gap-3">
+        <button id="rtl-toggle" class="hidden xl:flex w-10 h-10 rounded-full border border-wax-rose-light dark:border-wax-rose-dark/40 items-center justify-center text-wax-charcoal dark:text-wax-cream hover:border-wax-rose hover:text-wax-rose transition-all">
+          <span class="text-[9px] font-bold">RTL</span>
+        </button>
+        <button id="theme-toggle" class="hidden xl:flex w-10 h-10 rounded-full border border-wax-rose-light dark:border-wax-rose-dark/40 items-center justify-center text-wax-charcoal dark:text-wax-cream hover:border-wax-rose hover:text-wax-rose transition-all">
+          <i class="fas fa-moon dark:hidden text-xs"></i>
+          <i class="fas fa-sun hidden dark:inline text-xs"></i>
+        </button>
+        <a href="contact.html" class="hidden xl:inline-flex btn-primary px-6 py-3 rounded-full items-center gap-2">
+          <i class="fas fa-calendar-check text-xs"></i>
+          Book Now
+        </a>
+        <button id="mobile-toggle" class="xl:hidden w-10 h-10 rounded-full bg-wax-rose text-white flex items-center justify-center shadow-md">
+          <i class="fas fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu-design xl:hidden">
+      <div class="py-5 px-3 space-y-1">
+        <div>
+          <button onclick="document.getElementById('home-mobile-drop').classList.toggle('hidden'); document.getElementById('home-mobile-icon').classList.toggle('rotate-180')" class="w-full flex items-center justify-between py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest cursor-pointer">
+            <span>Home</span>
+            <i id="home-mobile-icon" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+          </button>
+          <div id="home-mobile-drop" class="hidden pl-3 space-y-1 mt-1 mb-2">
+            <a href="index.html" class="block py-2.5 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-lg text-sm uppercase tracking-widest transition">
+              <i class="fas fa-home w-5 me-2 text-xs"></i> Home 1
+            </a>
+            <a href="home2.html" class="block py-2.5 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-lg text-sm uppercase tracking-widest transition">
+              <i class="fas fa-home w-5 me-2 text-xs"></i> Home 2
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="block py-3 px-4 font-bold text-wax-rose dark:text-wax-rose-light bg-wax-rose-light/40 dark:bg-wax-rose-dark/40 hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">About</a>
+        <a href="services.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Services</a>
+        <a href="pricing.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Pricing</a>
+        <a href="waxing.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Waxing</a>
+        <a href="gallery.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Gallery</a>
+        <a href="treatments.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Treatments</a>
+        <a href="contact.html" class="block py-3 px-4 font-medium text-wax-charcoal dark:text-wax-cream hover:bg-wax-rose-light/60 dark:hover:bg-wax-rose-dark/20 rounded-xl text-sm uppercase tracking-widest transition">Contact</a>
+
+        <div class="flex flex-col gap-3 pt-5 mt-3 border-t border-wax-rose-light dark:border-wax-rose-dark/30">
+          <a href="contact.html" class="text-center btn-primary py-3.5 rounded-full text-xs font-bold">Book Now</a>
+          <div class="flex gap-3">
+            <button id="mobile-theme-toggle" class="flex-1 py-2.5 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 text-wax-rose text-xs font-semibold uppercase tracking-widest">
+              <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i> Theme
+            </button>
+            <button id="mobile-rtl-toggle" class="flex-1 py-2.5 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 text-wax-rose text-xs font-semibold uppercase tracking-widest">
+              <i class="fas fa-exchange-alt"></i> RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+  <!-- ============================================= -->
+  <!-- SECTION 1: HERO -->
+  <!-- ============================================= -->
+  <section class="hero-wax min-h-[100vh] md:min-h-[720px] flex items-center pt-28 pb-20 md:pt-32 md:pb-24">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <div class="lg:col-span-12 text-center flex flex-col items-center mx-auto w-full max-w-5xl">
+          <div class="inline-flex items-center gap-3 bg-wax-rose-light/60 dark:bg-wax-rose-dark/30 backdrop-blur-md border border-wax-rose/20 px-5 py-2 rounded-full mb-8 animate-fade-up">
+            <span class="w-2 h-2 rounded-full bg-wax-rose animate-pulse"></span>
+            <span class="text-wax-rose text-[10px] md:text-xs font-semibold uppercase tracking-[0.3em]">Our Story · Since 2015</span>
+          </div>
+
+          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-wax-charcoal dark:text-wax-cream leading-[1.05] mb-8 animate-fade-up" style="animation-delay: 0.1s;">
+            The Art of <br>
+            <span class="italic font-light text-wax-rose">Beautiful Skin</span>
+          </h1>
+
+          <p class="text-wax-gray dark:text-wax-rose-light/70 text-base md:text-lg max-w-xl mx-auto  mb-10 leading-relaxed font-light animate-fade-up" style="animation-delay: 0.2s;">
+            BareGlow was born from a simple belief: hair removal should feel like self-care — never rushed, never painful. Today, we're one of New York's most-loved waxing studios.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center  animate-fade-up" style="animation-delay: 0.3s;">
+            <a href="contact.html" class="btn-primary px-9 py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs font-semibold">
+              <i class="fas fa-calendar-check"></i> Book Your Visit
+            </a>
+            <a href="services.html" class="btn-outline px-9 py-4 rounded-full inline-flex items-center justify-center gap-2 text-xs font-semibold">
+              <i class="fas fa-sparkles"></i> Our Services
+            </a>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center  gap-6 mt-12 animate-fade-up" style="animation-delay: 0.4s;">
+            <div class="flex items-center gap-2 text-wax-gray dark:text-wax-rose-light/60">
+              <i class="fas fa-users text-wax-gold"></i>
+              <span class="text-[10px] uppercase tracking-widest font-semibold">12,000+ Clients</span>
+            </div>
+            <div class="flex items-center gap-2 text-wax-gray dark:text-wax-rose-light/60">
+              <i class="fas fa-award text-wax-gold"></i>
+              <span class="text-[10px] uppercase tracking-widest font-semibold">Award Winning</span>
+            </div>
+            <div class="flex items-center gap-2 text-wax-gray dark:text-wax-rose-light/60">
+              <i class="fas fa-heart text-wax-gold"></i>
+              <span class="text-[10px] uppercase tracking-widest font-semibold">10+ Years of Care</span>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 2: ABOUT OUR STUDIO -->
+  <!-- ============================================= -->
+  <section class="py-24 md:py-32 bg-white dark:bg-[#1A0F1C] relative overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-wax-rose-light/40 dark:bg-wax-rose-dark/20 rounded-full blur-3xl"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <!-- Left visual -->
+        <div class="relative reveal">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <div class="rounded-3xl overflow-hidden shadow-2xl h-56 md:h-72">
+                <img src="assets/about-studio-1.jpg" alt="BareGlow Studio Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000">
+              </div>
+              <div class="rounded-3xl overflow-hidden shadow-2xl h-40 md:h-52">
+                <img src="assets/about-studio-2.jpg" alt="Relaxing Ambience" class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000">
+              </div>
+            </div>
+            <div class="space-y-4 pt-12">
+              <div class="rounded-3xl overflow-hidden shadow-2xl h-40 md:h-52">
+                <img src="assets/about-studio-3.jpg" alt="Care Products" class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000">
+              </div>
+              <div class="rounded-3xl overflow-hidden shadow-2xl h-56 md:h-72">
+                <img src="assets/about-studio-4.jpg" alt="Treatment Room" class="w-full h-full object-cover hover:scale-105 transition-transform duration-1000">
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating badge -->
+          <div class="absolute -bottom-6 left-4 md:left-12 bg-wax-rose text-white rounded-3xl px-6 py-5 shadow-2xl float-petal">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-heart text-2xl"></i>
+              <div>
+                <div class="text-[10px] uppercase tracking-widest font-semibold opacity-90">Made with Care</div>
+                <div class="font-serif font-bold text-lg">Since 2015</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right content -->
+        <div class="reveal">
+          <div class="divider-flower mb-6">
+            <i class="fas fa-spa text-xs"></i>
+          </div>
+          <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">About Our Studio</span>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-8 leading-tight">
+            A Sanctuary for <br>
+            <span class="italic font-light text-wax-rose">Smooth Skin</span>
+          </h2>
+
+          <p class="text-wax-gray dark:text-wax-rose-light/70 text-base md:text-lg leading-relaxed mb-6">
+            BareGlow Studio was founded in 2015 with a single mission: to transform waxing from something to endure into something to enjoy. We built a space where soft lighting, calming scents, and expert hands come together to make every visit feel like a ritual.
+          </p>
+          <p class="text-wax-gray dark:text-wax-rose-light/70 text-base leading-relaxed mb-10">
+            Every product we use is 100% natural, every tool is single-use or sterilized, and every therapist is certified in the latest gentle-waxing techniques. Because beautiful skin begins with thoughtful care.
+          </p>
+
+          <!-- Mini stats -->
+          <div class="grid grid-cols-3 gap-4 mb-10">
+            <div class="text-center p-4 rounded-2xl bg-wax-blush dark:bg-wax-charcoal border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+              <div class="text-3xl font-serif font-bold text-wax-rose">12K+</div>
+              <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mt-1">Happy Clients</div>
+            </div>
+            <div class="text-center p-4 rounded-2xl bg-wax-blush dark:bg-wax-charcoal border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+              <div class="text-3xl font-serif font-bold text-wax-rose">10+</div>
+              <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mt-1">Years Open</div>
+            </div>
+            <div class="text-center p-4 rounded-2xl bg-wax-blush dark:bg-wax-charcoal border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+              <div class="text-3xl font-serif font-bold text-wax-rose">4.9</div>
+              <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60 mt-1">Avg. Rating</div>
+            </div>
+          </div>
+
+          <a href="gallery.html" class="btn-primary px-9 py-4 rounded-full inline-flex items-center gap-2 text-xs font-semibold">
+            <i class="fas fa-images"></i> Tour Our Studio
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 3: OUR SPECIALISTS -->
+  <!-- ============================================= -->
+  <section class="py-24 md:py-32 bg-wax-blush dark:bg-wax-charcoal relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-wax-rose-light/50 dark:bg-wax-rose-dark/20 rounded-full blur-3xl"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="text-center mb-16 reveal">
+        <div class="divider-flower mb-6">
+          <i class="fas fa-user-md text-xs"></i>
+        </div>
+        <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Meet The Team</span>
+        <h2 class="text-4xl md:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6">
+          Our Expert <span class="italic font-light text-wax-rose">Specialists</span>
+        </h2>
+        <p class="text-wax-gray dark:text-wax-rose-light/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          Certified, gentle, and endlessly patient — our therapists make every appointment feel effortless.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <!-- Specialist 1 -->
+        <div class="specialist-card bg-white dark:bg-[#1A0F1C] rounded-3xl overflow-hidden shadow-xl border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal flex flex-col">
+          <div class="img-wrap aspect-[3/4] relative">
+            <img src="assets/specialist-1.jpg" alt="Sophia Laurent" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-wax-charcoal/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-lg">
+              <span class="text-[9px] uppercase tracking-widest font-bold text-wax-rose">Founder</span>
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-serif font-bold text-2xl text-wax-charcoal dark:text-wax-cream mb-1">Sophia Laurent</h3>
+            <div class="text-[10px] uppercase tracking-widest font-bold text-wax-rose mb-4">Lead Therapist &amp; Founder</div>
+            <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed mb-6 flex-1">
+              Over 12 years of waxing expertise. Specialized in gentle Brazilian and sensitive-skin treatments.
+            </p>
+            <div class="flex gap-2 mt-auto">
+              <a href="#" class="w-9 h-9 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 flex items-center justify-center text-wax-rose hover:bg-wax-rose hover:text-white transition">
+                <i class="fab fa-instagram text-xs"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 flex items-center justify-center text-wax-rose hover:bg-wax-rose hover:text-white transition">
+                <i class="fab fa-linkedin-in text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 2 -->
+        <div class="specialist-card bg-white dark:bg-[#1A0F1C] rounded-3xl overflow-hidden shadow-xl border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal flex flex-col">
+          <div class="img-wrap aspect-[3/4] relative">
+            <img src="assets/specialist-2.jpg" alt="Amelia Chen" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-wax-charcoal/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-lg">
+              <span class="text-[9px] uppercase tracking-widest font-bold text-wax-rose">Senior</span>
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-serif font-bold text-2xl text-wax-charcoal dark:text-wax-cream mb-1">Amelia Chen</h3>
+            <div class="text-[10px] uppercase tracking-widest font-bold text-wax-rose mb-4">Senior Wax Specialist</div>
+            <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed mb-6 flex-1">
+              A facial waxing virtuoso. Known for her precise brow shaping and gentle touch on delicate areas.
+            </p>
+            <div class="flex gap-2 mt-auto">
+              <a href="#" class="w-9 h-9 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 flex items-center justify-center text-wax-rose hover:bg-wax-rose hover:text-white transition">
+                <i class="fab fa-instagram text-xs"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 flex items-center justify-center text-wax-rose hover:bg-wax-rose hover:text-white transition">
+                <i class="fab fa-linkedin-in text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 3 -->
+        <div class="specialist-card bg-white dark:bg-[#1A0F1C] rounded-3xl overflow-hidden shadow-xl border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal flex flex-col">
+          <div class="img-wrap aspect-[3/4] relative">
+            <img src="assets/specialist-3.jpg" alt="Isabella Rossi" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-wax-charcoal/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-lg">
+              <span class="text-[9px] uppercase tracking-widest font-bold text-wax-rose">Body Care</span>
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-serif font-bold text-2xl text-wax-charcoal dark:text-wax-cream mb-1">Isabella Rossi</h3>
+            <div class="text-[10px] uppercase tracking-widest font-bold text-wax-rose mb-4">Body Waxing Specialist</div>
+            <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed mb-6 flex-1">
+              Expert in full-body waxing and post-care. Her soothing techniques make even first-timers feel at ease.
+            </p>
+            <div class="flex gap-2 mt-auto">
+              <a href="#" class="w-9 h-9 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 flex items-center justify-center text-wax-rose hover:bg-wax-rose hover:text-white transition">
+                <i class="fab fa-instagram text-xs"></i>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-wax-rose-light dark:bg-wax-rose-dark/30 flex items-center justify-center text-wax-rose hover:bg-wax-rose hover:text-white transition">
+                <i class="fab fa-linkedin-in text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-14 reveal">
+        <a href="contact.html" class="btn-primary px-9 py-4 rounded-full inline-flex items-center gap-2 text-xs font-semibold">
+          <i class="fas fa-calendar-check"></i> Book With Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 4: OUR APPROACH -->
+  <!-- ============================================= -->
+  <section class="py-24 md:py-32 bg-white dark:bg-[#1A0F1C] relative">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+
+      <div class="text-center mb-16 reveal">
+        <div class="divider-flower mb-6">
+          <i class="fas fa-leaf text-xs"></i>
+        </div>
+        <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">How We Work</span>
+        <h2 class="text-4xl md:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6">
+          Our <span class="italic font-light text-wax-rose">Approach</span>
+        </h2>
+        <p class="text-wax-gray dark:text-wax-rose-light/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          Thoughtfully designed rituals that put your comfort, safety, and results first — every single visit.
+        </p>
+      </div>
+
+      <!-- 4-step approach -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+        <div class="approach-step bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal">
+          <div class="w-16 h-16 rounded-full bg-wax-rose text-white flex items-center justify-center mb-6">
+            <span class="font-serif font-bold text-2xl">01</span>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream mb-3">Personal Consultation</h4>
+          <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">
+            We take time to understand your skin, sensitivities, and expectations before we begin.
+          </p>
+        </div>
+
+        <div class="approach-step bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal">
+          <div class="w-16 h-16 rounded-full bg-wax-rose text-white flex items-center justify-center mb-6">
+            <span class="font-serif font-bold text-2xl">02</span>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream mb-3">Gentle Prep</h4>
+          <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">
+            Cleansing and pre-wax oil create a protective barrier that makes the process easier on your skin.
+          </p>
+        </div>
+
+        <div class="approach-step bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal">
+          <div class="w-16 h-16 rounded-full bg-wax-rose text-white flex items-center justify-center mb-6">
+            <span class="font-serif font-bold text-2xl">03</span>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream mb-3">Expert Waxing</h4>
+          <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">
+            Using our signature low-temperature natural wax blend for maximum comfort and smooth results.
+          </p>
+        </div>
+
+        <div class="approach-step bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal">
+          <div class="w-16 h-16 rounded-full bg-wax-rose text-white flex items-center justify-center mb-6">
+            <span class="font-serif font-bold text-2xl">04</span>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream mb-3">Soothing Finish</h4>
+          <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">
+            Cooling serum, aftercare advice, and personalized tips to keep skin smooth for weeks.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Approach quote -->
+      <div class="max-w-3xl mx-auto mt-16 text-center reveal">
+        <div class="quote-mark mb-4">"</div>
+        <p class="text-xl md:text-2xl italic font-serif text-wax-charcoal dark:text-wax-cream leading-relaxed">
+          We believe the best beauty rituals are the ones that leave you feeling cared for — not just looking beautiful.
+        </p>
+        <div class="mt-6 flex items-center justify-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wax-rose flex items-center justify-center text-white font-serif font-bold text-sm">SL</div>
+          <div class="text-left">
+            <div class="font-bold text-wax-charcoal dark:text-wax-cream text-sm">Sophia Laurent</div>
+            <div class="text-xs text-wax-gray dark:text-wax-rose-light/60">Founder, BareGlow Studio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 5: HYGIENE & SAFETY -->
+  <!-- ============================================= -->
+  <section class="py-24 md:py-32 bg-wax-cream dark:bg-wax-charcoal relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-wax-rose-light/40 dark:bg-wax-rose-dark/20 rounded-full blur-3xl"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left content -->
+        <div class="lg:col-span-5 reveal">
+          <div class="divider-flower mb-6">
+            <i class="fas fa-shield-heart text-xs"></i>
+          </div>
+          <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Hygiene & Safety</span>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-8 leading-tight">
+            Hygiene You Can <br>
+            <span class="italic font-light text-wax-rose">Trust</span>
+          </h2>
+          <p class="text-wax-gray dark:text-wax-rose-light/70 text-base md:text-lg leading-relaxed mb-10">
+            Cleanliness isn't a feature — it's the foundation of everything we do. Our studio exceeds industry hygiene standards so you can relax completely.
+          </p>
+
+          <a href="contact.html" class="btn-primary px-9 py-4 rounded-full inline-flex items-center gap-2 text-xs font-semibold">
+            <i class="fas fa-calendar-check"></i> Book With Confidence
+          </a>
+        </div>
+
+        <!-- Right hygiene features -->
+        <div class="lg:col-span-7 space-y-4 reveal">
+
+          <div class="hygiene-card bg-white dark:bg-[#1A0F1C] rounded-2xl p-6 border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-wax-rose-light dark:bg-wax-rose-dark/40 flex items-center justify-center text-wax-rose shrink-0">
+                <i class="fas fa-hand-sparkles text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-lg text-wax-charcoal dark:text-wax-cream mb-1">Single-Use Applicators</h4>
+                <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">Every spatula and strip is fresh, sealed, and used once — never reused, ever.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hygiene-card bg-white dark:bg-[#1A0F1C] rounded-2xl p-6 border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-wax-rose-light dark:bg-wax-rose-dark/40 flex items-center justify-center text-wax-rose shrink-0">
+                <i class="fas fa-spray-can-sparkles text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-lg text-wax-charcoal dark:text-wax-cream mb-1">Medical-Grade Sanitization</h4>
+                <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">Tools are sterilized with hospital-grade solutions between every client.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hygiene-card bg-white dark:bg-[#1A0F1C] rounded-2xl p-6 border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-wax-rose-light dark:bg-wax-rose-dark/40 flex items-center justify-center text-wax-rose shrink-0">
+                <i class="fas fa-soap text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-lg text-wax-charcoal dark:text-wax-cream mb-1">Fresh Linen Every Time</h4>
+                <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">New towels, sheets, and pillow covers for each guest — no exceptions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hygiene-card bg-white dark:bg-[#1A0F1C] rounded-2xl p-6 border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-wax-rose-light dark:bg-wax-rose-dark/40 flex items-center justify-center text-wax-rose shrink-0">
+                <i class="fas fa-leaf text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-lg text-wax-charcoal dark:text-wax-cream mb-1">Natural, Skin-Safe Products</h4>
+                <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">Our waxes and post-care products are dermatologist-tested and gentle on all skin types.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION 6: WHY CHOOSE US -->
+  <!-- ============================================= -->
+  <section class="py-24 md:py-32 bg-white dark:bg-[#1A0F1C] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12">
+
+      <div class="text-center mb-16 reveal">
+        <div class="divider-flower mb-6">
+          <i class="fas fa-heart text-xs"></i>
+        </div>
+        <span class="block text-[10px] uppercase tracking-[0.4em] text-wax-rose font-bold mb-4">Why BareGlow</span>
+        <h2 class="text-4xl md:text-6xl font-serif font-bold text-wax-charcoal dark:text-wax-cream mb-6">
+          Why Clients <span class="italic font-light text-wax-rose">Choose Us</span>
+        </h2>
+        <p class="text-wax-gray dark:text-wax-rose-light/70 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          More than a waxing studio — a place where you're genuinely cared for, every single visit.
+        </p>
+      </div>
+
+      <!-- Stat strip -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 reveal">
+        <div class="stat-card text-center p-6 rounded-3xl bg-wax-blush dark:bg-wax-charcoal border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+          <div class="text-4xl font-serif font-bold text-wax-rose mb-2">12K+</div>
+          <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60">Happy Clients</div>
+        </div>
+        <div class="stat-card text-center p-6 rounded-3xl bg-wax-blush dark:bg-wax-charcoal border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+          <div class="text-4xl font-serif font-bold text-wax-rose mb-2">10+</div>
+          <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60">Years of Care</div>
+        </div>
+        <div class="stat-card text-center p-6 rounded-3xl bg-wax-blush dark:bg-wax-charcoal border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+          <div class="text-4xl font-serif font-bold text-wax-rose mb-2">4.9</div>
+          <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60">Avg. Rating</div>
+        </div>
+        <div class="stat-card text-center p-6 rounded-3xl bg-wax-blush dark:bg-wax-charcoal border border-wax-rose-light/60 dark:border-wax-rose-dark/30">
+          <div class="text-4xl font-serif font-bold text-wax-rose mb-2">98%</div>
+          <div class="text-[10px] uppercase tracking-widest font-bold text-wax-gray dark:text-wax-rose-light/60">Return Rate</div>
+        </div>
+      </div>
+
+      <!-- 3 key differentiators -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <div class="bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal">
+          <div class="w-14 h-14 rounded-full bg-wax-rose flex items-center justify-center text-white mb-6">
+            <i class="fas fa-star text-lg"></i>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream mb-3">Uncompromising Quality</h4>
+          <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">
+            Premium natural waxes, expert techniques, and consistent results you can count on every visit.
+          </p>
+        </div>
+
+        <div class="bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal">
+          <div class="w-14 h-14 rounded-full bg-wax-rose flex items-center justify-center text-white mb-6">
+            <i class="fas fa-hand-holding-heart text-lg"></i>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream mb-3">Truly Personal Care</h4>
+          <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">
+            We remember your preferences, your skin, and your comfort zone. You're never just a number here.
+          </p>
+        </div>
+
+        <div class="bg-wax-blush dark:bg-wax-charcoal rounded-3xl p-8 border border-wax-rose-light/60 dark:border-wax-rose-dark/30 reveal">
+          <div class="w-14 h-14 rounded-full bg-wax-rose flex items-center justify-center text-white mb-6">
+            <i class="fas fa-gem text-lg"></i>
+          </div>
+          <h4 class="font-serif font-bold text-xl text-wax-charcoal dark:text-wax-cream mb-3">A Beautiful Space</h4>
+          <p class="text-sm text-wax-gray dark:text-wax-rose-light/70 leading-relaxed">
+            From calming lighting to soft music and elegant interiors — every detail is designed for relaxation.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Final CTA -->
+      <div class="col-span-full w-full mt-16 bg-gradient-to-br from-wax-rose to-wax-rose-dark rounded-[40px] p-10 md:p-14 text-center reveal">
+        <h3 class="text-3xl md:text-5xl font-serif text-white mb-4 leading-tight">
+          Ready to Experience <br class="hidden md:block">
+          <span class="italic font-light">the BareGlow Difference?</span>
+        </h3>
+        <p class="text-white/85 text-base md:text-lg max-w-xl mx-auto mb-8">
+          Book your first appointment today and enjoy 20% off — new clients only.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="bg-white text-wax-rose hover:bg-wax-charcoal hover:text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-2xl inline-flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check"></i> Book Now
+          </a>
+          <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-wax-rose px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 inline-flex items-center justify-center gap-2">
+            <i class="fas fa-comments"></i> Contact Us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="bg-wax-charcoal dark:bg-[#0F0810] text-white pt-20 pb-8 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 right-0 text-center pointer-events-none select-none opacity-[0.03] translate-y-1/4">
+      <h2 class="font-serif font-bold text-[18vw] whitespace-nowrap text-white">BareGlow</h2>
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
+
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-wax-rose to-wax-rose-dark flex items-center justify-center">
+              <i class="fas fa-spa text-white"></i>
+            </div>
+            <div class="leading-none">
+              <div class="text-2xl font-serif font-bold text-wax-rose">Bare<span class="text-wax-rose italic">Glow</span></div>
+              <div class="text-[9px] uppercase tracking-[0.35em] text-wax-rose font-semibold">Waxing Studio</div>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed mb-6 max-w-sm">
+            A luxury waxing and body hair removal studio dedicated to making every client feel confident, comfortable, and cared for.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-pinterest-p text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-wax-rose hover:bg-wax-rose transition-all duration-300">
+              <i class="fab fa-tiktok text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wax-gold mb-6">Explore</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="about.html" class="text-white/60 hover:text-wax-gold transition">About Us</a></li>
+            <li><a href="services.html" class="text-white/60 hover:text-wax-gold transition">Services</a></li>
+            <li><a href="pricing.html" class="text-white/60 hover:text-wax-gold transition">Pricing</a></li>
+            <li><a href="gallery.html" class="text-white/60 hover:text-wax-gold transition">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wax-gold mb-6">Treatments</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="waxing.html" class="text-white/60 hover:text-wax-gold transition">Waxing</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Body Treatments</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Facial Waxing</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Brazilian</a></li>
+            <li><a href="treatments.html" class="text-white/60 hover:text-wax-gold transition">Full Body</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-wax-gold mb-6">Get in Touch</h4>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-wax-rose mt-1"></i>
+              <span class="text-white/60">128 Glow Avenue, Suite 4<br>New York, NY 10012</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-wax-rose"></i>
+              <a href="tel:+12125550199" class="text-white/60 hover:text-wax-gold transition">+1 (212) 555-0199</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-wax-rose"></i>
+              <a href="mailto:hello@bareglowstudio.com" class="text-white/60 hover:text-wax-gold transition">hello@bareglowstudio.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-wax-rose mt-1"></i>
+              <span class="text-white/60">Mon–Fri: 9am – 8pm<br>Sat–Sun: 10am – 6pm</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-[10px] uppercase tracking-[0.2em]">© 2026 BareGlow Waxing Studio. All rights reserved.</p>
+        <div class="flex gap-6 text-[10px] uppercase tracking-[0.2em] text-white/40">
+          <a href="#" class="hover:text-wax-gold transition">Privacy</a>
+          <a href="#" class="hover:text-wax-gold transition">Terms</a>
+          <a href="#" class="hover:text-wax-gold transition">Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================= -->
+  <!-- SCRIPTS -->
+  <!-- ============================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme toggle
+      const themeBtns = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
+      themeBtns.forEach(btn => {
+        btn?.addEventListener('click', () => {
+          document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      });
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+      // RTL
+      function setRTL(isRTL) {
+        const html = document.documentElement;
+        if (isRTL === 'rtl' || isRTL === true) { html.setAttribute('dir', 'rtl'); localStorage.setItem('dir', 'rtl'); }
+        else { html.setAttribute('dir', 'ltr'); localStorage.setItem('dir', 'ltr'); }
+      }
+      const savedDir = localStorage.getItem('dir');
+      if (savedDir === 'rtl') document.documentElement.setAttribute('dir', 'rtl');
+      else document.documentElement.setAttribute('dir', 'ltr');
+
+      const rtlBtn = document.getElementById('rtl-toggle');
+      if (rtlBtn) rtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+      const mobileRtlBtn = document.getElementById('mobile-rtl-toggle');
+      if (mobileRtlBtn) mobileRtlBtn.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'));
+
+      // Mobile menu
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+          const icon = mobileToggle.querySelector('i');
+          if (mobileMenu.classList.contains('open')) {
+            icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+          }
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+          });
+        });
+      }
+
+      // Reveal on scroll
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
